@@ -31,6 +31,7 @@ class Database {
         useUnifiedTopology: true,
       }
     );
+    mongoose.set("strictQuery", false);
   }
 }
 
