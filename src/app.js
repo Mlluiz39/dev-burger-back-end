@@ -1,33 +1,33 @@
-import express from 'express'
-import routes from './routes'
-import { resolve } from 'path'
+const express = require("express");
+const routes = require("./routes");
+const resolve = require("path").resolve;
 
-import './database'
+require("./database");
 
 class App {
-  constructor () {
-    this.app = express()
-    this.middleware()
-    this.routes()
+  constructor() {
+    this.app = express();
+    this.middleware();
+    this.routes();
   }
 
-  middleware () {
-    this.app.use(express.json())
+  middleware() {
+    this.app.use(express.json());
 
     this.app.use(
-      '/product-files',
-      express.static(resolve(__dirname, '..', 'uploads'))
-    )
+      "/product-files",
+      express.static(resolve(__dirname, "..", "uploads"))
+    );
 
     this.app.use(
-      '/category-files',
-      express.static(resolve(__dirname, '..', 'uploads'))
-    )
+      "/category-files",
+      express.static(resolve(__dirname, "..", "uploads"))
+    );
   }
 
-  routes () {
-    this.app.use(routes)
+  routes() {
+    this.app.use(routes);
   }
 }
 
-export default new App().app
+module.exports = new App().app;

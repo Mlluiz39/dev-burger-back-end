@@ -1,7 +1,6 @@
-import * as yup from 'yup'
-import Category from '../models/Category'
-import User from '../models/User'
-
+const yup = require('yup')
+const Category = require( '../models/Category')
+const User = require( '../models/User')
 class CategoryController {
   async store (req, res) {
     try {
@@ -92,4 +91,4 @@ class CategoryController {
   }
 }
 
-export default new CategoryController()
+module.exports = new CategoryController()

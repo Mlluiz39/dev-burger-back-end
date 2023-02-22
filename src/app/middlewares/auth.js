@@ -1,6 +1,6 @@
-import Jwt from 'jsonwebtoken'
+const Jwt = require('jsonwebtoken')
 
-export default async (req, res, next) => {
+module.exports = (req, res, next) => {
   const authHeader = req.headers.authorization
 
   // verifica se o token foi enviado
