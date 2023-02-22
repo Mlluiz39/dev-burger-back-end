@@ -1,7 +1,7 @@
 {
-  "name": "2.init-project-devburger",
+  "name": "2.init-project-dev-burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "Api dev burger",
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon",
