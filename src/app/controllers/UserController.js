@@ -11,12 +11,6 @@ class UserController {
       admin: Yup.boolean(),
     });
 
-    /** validação básica
-     * if (!(await schema.isValid(req.body))) {
-     *  return res.status(400).json({ error: 'Validation fails' })
-     * }
-     */
-
     try {
       schema.validateSync(req.body, { abortEarly: false });
     } catch (err) {

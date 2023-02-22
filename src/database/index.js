@@ -24,6 +24,7 @@ class Database {
   }
 
   mongo() {
+    mongoose.set("strictQuery", true);
     this.mongoConnection = mongoose.connect(
       "mongodb://164.152.48.202/devBurger",
       {
@@ -31,7 +32,6 @@ class Database {
         useUnifiedTopology: true,
       }
     );
-    mongoose.set("strictQuery", false);
   }
 }
 
