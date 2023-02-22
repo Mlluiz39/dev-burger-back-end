@@ -1,4 +1,4 @@
-const { User } = require("../models/User");
+const  User  = require("../models/User");
 const { v4 } = require("uuid");
 const Yup = require("yup");
 
