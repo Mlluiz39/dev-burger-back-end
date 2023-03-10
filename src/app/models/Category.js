@@ -10,7 +10,7 @@ class Category extends Model {
         url: {
           type: Sequelize.VIRTUAL,
           get () {
-            return `${process.env.APP_URL}/category-files/${this.path}`
+            return `https://apidevburger.fly.dev/category-files/${this.path}`
           }
         }
       },
