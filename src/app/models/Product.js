@@ -12,7 +12,7 @@ class Product extends Model {
         url: {
           type: Sequelize.VIRTUAL,
           get () {
-            return `https://apidevburger.fly.dev/product-file/${this.path}`
+            return `https://apidevburger.fly.dev/product-files/${this.path}`
           }
         }
       },
