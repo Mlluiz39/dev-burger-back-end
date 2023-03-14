@@ -2,7 +2,6 @@ const express = require("express");
 const routes = require("./routes");
 const resolve = require("path").resolve;
 const cors = require("cors");
-const { access } = require("fs");
 
 require("./database");
 
