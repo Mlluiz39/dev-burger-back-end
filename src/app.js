@@ -8,7 +8,15 @@ require("./database");
 class App {
   constructor() {
     this.app = express();
-    this.app.use(cors());
+    this.app.use(
+      cors( 
+      {
+        origin: "https://mlluizburgercode.netlify.app/",
+        credentials: true,
+        optionsSuccessStatus: 200
+
+      }
+    ));
     this.middleware();
     this.routes();
   }
