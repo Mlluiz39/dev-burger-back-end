@@ -7,8 +7,8 @@ require("./database");
 
 class App {
   constructor() {
-    this.app.use(cors());
     this.app = express();
+    this.app.use(cors());
     this.middleware();
     this.routes();
   }
