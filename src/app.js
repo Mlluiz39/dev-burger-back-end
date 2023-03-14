@@ -2,21 +2,14 @@ const express = require("express");
 const routes = require("./routes");
 const resolve = require("path").resolve;
 const cors = require("cors");
+const { access } = require("fs");
 
 require("./database");
 
 class App {
   constructor() {
     this.app = express();
-    this.app.use(
-      cors( 
-      {
-        origin: "https://mlluizburgercode.netlify.app/",
-        credentials: true,
-        optionsSuccessStatus: 200
-
-      }
-    ));
+    this.app.use(cors({ headers: { "Access-Control-Allow-Origin": "*" } }));
     this.middleware();
     this.routes();
   }
