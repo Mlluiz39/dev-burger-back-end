@@ -8,7 +8,7 @@ require("./database");
 class App {
   constructor() {
     this.app = express();
-    this.app.use(cors({ headers: { "Access-Control-Allow-Origin": "*" } }));
+    this.app.use(cors());
     this.middleware();
     this.routes();
   }
