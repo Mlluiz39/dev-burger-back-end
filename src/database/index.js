@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const mongoose = require("mongoose");
 
-const configDatabase = require("../config/database");
+// const configDatabase = require("../config/database");
 const User = require("../app/models/User");
 const Product = require("../app/models/Product");
 const Category = require("../app/models/Category");
@@ -15,7 +15,9 @@ class Database {
   }
 
   init() {
-    this.connection = new Sequelize(configDatabase);
+    this.connection = new Sequelize(
+      "postgres://devburger_user:i34WUiAtRQz1MSPrZAKD8GQpjvN8uf5b@dpg-cgqsq2e4dadbdtff911g-a/devburger"
+    );
 
     models
       .map((model) => model.init(this.connection))
