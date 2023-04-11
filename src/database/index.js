@@ -16,6 +16,7 @@ class Database {
 
   init() {
     this.connection = new Sequelize(configDatabase);
+
     models
       .map((model) => model.init(this.connection))
       .map(
@@ -26,7 +27,7 @@ class Database {
   mongo() {
     mongoose.set("strictQuery", true);
     this.mongoConnection = mongoose.connect(
-      "mongodb://164.152.48.202/devBurger",
+      "mongodb+srv://mlluiz39:Julia2912@cluster0.df9gz.mongodb.net/?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
