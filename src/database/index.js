@@ -27,7 +27,7 @@ class Database {
   mongo() {
     mongoose.set("strictQuery", true);
     this.mongoConnection = mongoose.connect(
-      "mongodb+srv://mlluiz39:Julia2912@cluster0.df9gz.mongodb.net/?retryWrites=true&w=majority",
+      "mongodb://164.152.48.202/devBurger",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
