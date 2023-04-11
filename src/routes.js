@@ -15,11 +15,11 @@ const upload = multer(multerConfig);
 routes.post("/users", UserController.store);
 routes.post("/sessions", SessionController.store);
 
-// try {
-//   routes.use(authMiddleware);
-// } catch (error) {
-//   console.log(error);
-// } // All routes below this line will use the authMiddleware
+try {
+  routes.use(authMiddleware);
+} catch (error) {
+  console.log(error);
+} // All routes below this line will use the authMiddleware
 
 routes.post("/products", upload.single("file"), ProductController.store);
 routes.get("/products", ProductController.index);
