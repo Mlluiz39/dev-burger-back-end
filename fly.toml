@@ -1,4 +1,0 @@
-# fly.toml file generated for apidevburger on 2023-04-11T19:15:30-03:00
-
-app = "apidevburger"
-primary_region = "gru"
